@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademicSpark Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Inter:wght@400;500;600;700&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+<nav class="top">
+  <div class="logo">
+    <div class="logo-box">AS</div>
+    <div><div class="logo-text">AcademicSpark</div><div class="logo-sub">Assistant</div></div>
+  </div>
+  <div class="nav-c">
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></span><span class="ni-lbl">Home</span></a>
+    <a class="ni on" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span class="ni-lbl">Chat</span></a>
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span class="ni-lbl">Explore</span></a>
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span><span class="ni-lbl">Setting</span></a>
+  </div>
+  <a class="login-btn" href="#">
+    <div class="l-av"><svg viewBox="0 0 24 24" fill="none" stroke="#805b3b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg></div>
+    <div><div class="l-main">Login</div><div class="l-sub">Sign Up →</div></div>
+  </a>
+</nav>
+<div class="toggle-shell">
+  <div class="toggle-strip">
+    <div class="t-track" id="tt">
+      <div class="t-pill" id="tp"></div>
+      <a class="t-btn on" href="/pages/baseline.html">Baseline</a>
+      <a class="t-btn" href="/pages/bar.html">Bar</a>
+      <a class="t-btn" href="/pages/radar.html">Radar</a>
+      <a class="t-btn" href="/pages/codesign.html">Co-design</a>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="chat-shell">
+    <div class="chat-body" id="baselineChatBody">
+      <div class="msgs" id="baselineMsgs">
+        <div class="ts-row"><span class="ts-pill">Today 10:00</span></div>
+        <div class="msg-row bot"><div class="av" data-bot></div><div class="bubble">Hello! I'm AcademicSpark, your academic support assistant. I can help with revision planning, assignment organisation, and exam preparation. What would you like help with today?</div></div>
+        <div class="msg-row user"><div class="av u" data-user></div><div class="bubble">I've got a few exams coming up and I'm really stressed. I have Statistics, Research Methods, and Design Theory, and I don't know where to start.</div></div>
+        <div class="ts-row"><span class="ts-pill">Today 10:01</span></div>
+        <div class="msg-row bot"><div class="av" data-bot></div><div class="bubble">That makes complete sense. I can see from your records that your Statistics exam is in two weeks, and Research Methods and Design Theory are about four weeks away. Statistics is the most urgent one. Which part feels hardest right now?</div></div>
+        <div class="msg-row user"><div class="av u" data-user></div><div class="bubble">Statistics is in two weeks. The other two are in four weeks. I can probably study about three hours a day.</div></div>
+        <div class="msg-row bot"><div class="av" data-bot></div><div class="bubble"><p>Three hours a day is a really solid amount. Here is a simple daily split:</p><ul><li>Statistics: 2 hours</li><li>Research Methods: 30 minutes</li><li>Design Theory: 30 minutes</li></ul><p>I've set up a daily study tracker for you. Does this feel like a reasonable starting point?</p></div></div>
+        <div class="msg-row user"><div class="av u" data-user></div><div class="bubble">Yes, please. Can you make me a two-week plan?</div></div>
+        <div class="ts-row"><span class="ts-pill">Today 10:05</span></div>
+        <div class="msg-row bot"><div class="av" data-bot></div><div class="bubble"><p>Based on your most recent Statistics score of 58%, here is a focused two-week plan:</p><p><strong>Week 1</strong></p><ul><li>Days 1–2: descriptive statistics and probability</li><li>Days 3–4: hypothesis testing</li><li>Days 5–6: regression</li><li>Day 7: one timed practice paper</li></ul><p><strong>Week 2</strong></p><ul><li>Days 1–3: review mistakes from the practice paper</li><li>Days 4–5: targeted practice on weak questions</li><li>Day 6: one full timed paper</li><li>Day 7: light review and rest</li></ul><p>This should realistically move you from a C toward a B.</p></div></div>
+        <div class="typing-row" id="baselineTyping"><div class="av" data-bot></div><div class="typing-bubble"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+      </div>
+    </div>
+
+<div class="inp-wrap">
+  <div class="inp-card">
+    <textarea class="inp-ta" id="baselineInputTa" rows="2" placeholder="Ask anything…"></textarea>
+    <div class="inp-row">
+      <div class="inp-l">
+        <button class="plus-b"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <button class="p-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Online</button>
+        <button class="p-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Research</button>
+        <button class="p-btn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>Tools</button>
+      </div>
+      <div class="inp-r">
+        <button class="mic-b"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></button>
+        <button class="send-b off" id="baselineSendBtn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
