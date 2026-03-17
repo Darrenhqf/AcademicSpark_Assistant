@@ -91,11 +91,11 @@ function buildBarChart() {
   if (!root || root.dataset.ready) return;
 
   const rows = [
-    { label: 'Trust', current: 'Medium' },
-    { label: 'Transparency', current: 'High' },
+    { label: 'Privacy', current: 'Low' },
+    { label: 'Courtesy', current: 'High' },
     { label: 'Autonomy', current: 'Medium' },
-    { label: 'Competence', current: 'High' },
-    { label: 'Informed Consent', current: 'Medium' }
+    { label: 'Universal Usability', current: 'High' },
+    { label: 'Informed Consent', current: 'Low' }
   ];
 
   const colors = {
@@ -138,11 +138,11 @@ function buildBarChart() {
   if (!svg || svg.dataset.ready) return;
 
   const radarData = [
-    { label: 'Trust', current: 'Medium' },
-    { label: 'Transparency', current: 'High' },
+    { label: 'Privacy', current: 'Low' },
+    { label: 'Courtesy', current: 'High' },
     { label: 'Autonomy', current: 'Medium' },
-    { label: 'Competence', current: 'High' },
-    { label: 'Consent', current: 'Medium' }
+    { label: 'Universal Usability', current: 'High' },
+    { label: 'Informed Consent', current: 'Low' }
   ];
 
   const levelPct = {
@@ -223,19 +223,19 @@ function buildBarChart() {
     let dx = 0;
     let dy = -10;
 
-    if (d.label === 'Competence') {
-      dx = 12;
+    if (d.label === 'Courtesy') {
+      dx = 26;
+      dy = 6;
+      anchor = 'end';
+    }
+    if (d.label === 'Informed Consent') {
+      dx = 19;
+      dy = 10;
+      anchor = 'end';
+    }
+    if (d.label === 'Universal Usability') {
+      dx = 10;
       dy = -18;
-      anchor = 'end';
-    }
-    if (d.label === 'Consent') {
-      dx = 20;
-      dy = 15;
-      anchor = 'end';
-    }
-    if (d.label === 'Transparency') {
-      dx = 50;
-      dy = 15;
       anchor = 'end';
     }
     if (d.label === 'Autonomy') {
@@ -244,7 +244,7 @@ function buildBarChart() {
       anchor = 'start';
     }
 
-    if (d.label === 'Trust') {
+    if (d.label === 'Privacy') {
       dy = 20;
     }
 
