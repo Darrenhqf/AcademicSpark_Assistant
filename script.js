@@ -693,7 +693,7 @@ if (pageKey === 'baseline') {
     <div class="onboarding-screenshot-demo">
       <div class="onboarding-screenshot-note">Bottom-right visualisation button</div>
       <img
-        src="./assets/bar-expand-btn.png"
+        src="/assets/bar-expand-btn.png"
         alt="Bar chart expand button"
         class="onboarding-screenshot-img"
       />
