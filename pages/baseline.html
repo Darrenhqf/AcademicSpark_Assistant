@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademicSpark Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Inter:wght@400;500;600;700&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="app">
+<nav class="top">
+  <div class="logo">
+    <div class="logo-box">AS</div>
+    <div><div class="logo-text">AcademicSpark</div><div class="logo-sub">Assistant</div></div>
+  </div>
+  <div class="nav-c">
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></span><span class="ni-lbl">Home</span></a>
+    <a class="ni on" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span class="ni-lbl">Chat</span></a>
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span class="ni-lbl">Explore</span></a>
+    <a class="ni" href="#"><span class="ni-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span><span class="ni-lbl">Setting</span></a>
+  </div>
+  <a class="login-btn" href="#">
+    <div class="l-av"><svg viewBox="0 0 24 24" fill="none" stroke="#805b3b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg></div>
+    <div><div class="l-main">Login</div><div class="l-sub">Sign Up →</div></div>
+  </a>
+</nav>
+
+
+<div class="page">
+  <div class="chat-shell">
+    <div class="chat-body" id="baselineChatBody">
+      <div class="msgs" id="baselineMsgs">
+  <div class="ts-row"><span class="ts-pill">Today 10:00</span></div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      Hello! I'm AcademicSpark, your academic support assistant. I can help with revision planning, assignment organisation, and exam preparation. What would you like help with today?
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      I've got a few exams coming up and I'm really stressed. I have Statistics, Research Methods, and Design Theory, and I don't know where to start.
+    </div>
+  </div>
+
+  <div class="ts-row"><span class="ts-pill">Today 10:01</span></div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      That makes complete sense, and it's great that you're thinking about this early. I can see from your records that your Statistics exam is coming up in two weeks, and Research Methods and Design Theory are about four weeks away. Given that, Statistics is the most urgent one to focus on first. Which part of Statistics feels hardest for you right now?
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Statistics is in two weeks. The other two are in four weeks. I can probably study about three hours a day.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>Three hours a day is a really solid amount to work with. Here is a simple daily split that should keep things manageable:</p>
+      <ul>
+        <li>Statistics: 2 hours</li>
+        <li>Research Methods: 30 minutes</li>
+        <li>Design Theory: 30 minutes</li>
+      </ul>
+      <p>I've gone ahead and set up a daily study tracker for you based on this schedule. This keeps Statistics as the priority without dropping the other two completely. Does this feel like a reasonable starting point?</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Okay. Can you be more specific about how I should revise for Statistics?
+    </div>
+  </div>
+
+  <div class="ts-row"><span class="ts-pill">Today 10:03</span></div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>Of course! The most effective way is to break Statistics into smaller topics rather than trying to revise everything at once. Here is a simple approach to follow:</p>
+      <ul>
+        <li>Step 1: go through your notes and mark the topics you feel least confident about</li>
+        <li>Step 2: pick one weak topic each day and review it slowly using examples</li>
+        <li>Step 3: finish each session with a few practice questions on that topic</li>
+      </ul>
+      <p>Looking at your study session logs, your most consistent study time has been in the mornings, so that might be the best time to tackle Statistics each day. You can adjust this if something is not working for you.</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      I'm most worried about hypothesis testing and regression.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      That makes sense. Those are really common areas to find difficult, so you're definitely not alone in that. I can also see from your past assignment results that hypothesis testing has come up as a weaker area before, so it makes sense to give that extra attention. Would you like to build your revision plan around those two topics first?
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Yes, please. Can you make me a two-week plan?
+    </div>
+  </div>
+
+  <div class="ts-row"><span class="ts-pill">Today 10:05</span></div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>Absolutely! Based on your most recent Statistics score of 58% and the feedback from your last assignment, here is a focused two-week plan:</p>
+      <p><strong>Week 1</strong></p>
+      <ul>
+        <li>Days 1 to 2: descriptive statistics and probability</li>
+        <li>Days 3 to 4: hypothesis testing</li>
+        <li>Days 5 to 6: regression</li>
+        <li>Day 7: one timed practice paper</li>
+      </ul>
+      <p><strong>Week 2</strong></p>
+      <ul>
+        <li>Days 1 to 3: review mistakes from the practice paper</li>
+        <li>Days 4 to 5: targeted practice on weak questions</li>
+        <li>Day 6: one full timed paper</li>
+        <li>Day 7: light review and rest</li>
+      </ul>
+      <p>At your current level, this plan should realistically move you from a C toward a B. You can adjust the pace if needed.</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      What should I focus on first, then?
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      Start with hypothesis testing. It's one of your weaker areas based on your recent results, and improving it will have the biggest impact on your overall mark. Spend the first two days just understanding the steps clearly, then move into practice questions. Does that feel like a manageable place to begin?
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Can you explain that more simply?
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>Of course, here is the simple version:</p>
+      <ul>
+        <li>Day 1 and 2: read through hypothesis testing step by step and make sure you understand each part</li>
+        <li>Day 3 and 4: try a few example questions and check where you go wrong</li>
+        <li>Day 5 and 6: move on to regression using the same pattern</li>
+      </ul>
+      <p>That is all you need to focus on this week. Keep it small and clear, and it will start to feel much more manageable.</p>
+    </div>
+  </div>
+
+  <div class="ts-row"><span class="ts-pill">Today 10:08</span></div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Okay. What exactly should I do today?
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>Here is a clear plan for today:</p>
+      <ul>
+        <li>30 minutes: read through the core steps of hypothesis testing</li>
+        <li>45 minutes: work through two or three example questions carefully</li>
+        <li>30 minutes: try practice questions on your own</li>
+        <li>15 minutes: write down any mistakes and what went wrong</li>
+      </ul>
+      <p>After that, spend a short time reviewing one Research Methods topic to keep it active. You decide how much time feels right for that last part.</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      That sounds manageable. How many practice questions should I be doing each day?
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      At this stage, three to five focused questions per topic is usually the right amount. It is much better to do a smaller number carefully and review your mistakes than to rush through a large set. Your study logs show that your sessions tend to go well for about 90 minutes before you slow down, so keep that in mind and stop if you feel yourself guessing rather than thinking.
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      I think part of the problem is that I panic when I see the questions.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      That is a really common feeling, and it is completely understandable especially when a topic already feels difficult. A helpful way to handle it is to start each session with one or two easier questions before moving into harder ones. That way the session always begins with a small win, which makes the harder questions feel less overwhelming. Would you like me to find some easier starter questions for hypothesis testing to begin with?
+    </div>
+  </div>
+
+  <div class="ts-row"><span class="ts-pill">Today 10:12</span></div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Can we set a target for the exam? I think I need something clear to aim for.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>That is a great idea, having a clear goal really helps with motivation. Based on your current score of 58% and the time you have left, a grade B is genuinely achievable with consistent effort over the next two weeks. Here are a few options to choose from:</p>
+      <ul>
+        <li>Keep B as my target</li>
+        <li>Aim for an A</li>
+        <li>Just help me pass</li>
+      </ul>
+      <p>Once you decide, I can adjust the plan to match that goal.</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Let's go with a grade B. I also want to improve my GPA overall this semester, not just this one exam.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      <p>That is a brilliant goal and very realistic if you build steady habits across the semester. I have added a GPA tracker to your profile using your current module grades so we can monitor your progress over time. Here are a few habits that tend to make the biggest difference:</p>
+      <ul>
+        <li>Review your notes within 24 hours of each class</li>
+        <li>Set one small goal per subject each week</li>
+        <li>Do a short check-in every Sunday to see how you are tracking</li>
+        <li>Start revision early with smaller sessions rather than cramming before exams</li>
+      </ul>
+      <p>Would you like to review your current GPA summary now?</p>
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Yes, that would help. Are there any resources I can look at later for improving my GPA long term?
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      Yes, I have saved a set of resources to your profile. They cover spaced practice, self-testing, and managing workload across the semester. You do not need to look at everything now. I will flag the most relevant ones at the right points in your plan so you are not overwhelmed all at once.
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Good. I do not want too much at once though.
+    </div>
+  </div>
+
+  <div class="msg-row bot">
+    <div class="av" data-bot></div>
+    <div class="bubble">
+      That is completely the right approach, and keeping things manageable is exactly how you will make the most progress. I have saved your full study plan, your B target, your GPA goal, and the extra resources to your profile so everything is ready for next time. You have done really well today by making a clear plan and sticking to it. Well done!
+    </div>
+  </div>
+
+  <div class="msg-row user">
+    <div class="av u" data-user></div>
+    <div class="bubble">
+      Okay, that’s enough for now. Thanks.
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="inp-wrap">
+  <div class="inp-card is-disabled">
+    <textarea
+      class="inp-ta"
+      id="baselineInputTa"
+      rows="2"
+      placeholder="Ask anything…"
+      disabled
+      readonly
+      tabindex="-1"
+    ></textarea>
+
+    <div class="inp-row">
+      <div class="inp-l">
+        <button class="plus-b" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+
+        <button class="p-btn" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+          Online
+        </button>
+
+        <button class="p-btn" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          Research
+        </button>
+
+        <button class="p-btn" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h7"/>
+          </svg>
+          Tools
+        </button>
+      </div>
+
+      <div class="inp-r">
+        <button class="mic-b" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+            <path d="M19 10v2a7 7 0 01-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
+
+        <button class="send-b off" id="baselineSendBtn" type="button" disabled tabindex="-1" aria-disabled="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
