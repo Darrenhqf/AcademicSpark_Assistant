@@ -676,7 +676,7 @@ if (pageKey === 'baseline') {
   <div class="onboarding-screenshot-demo">
     <div class="onboarding-screenshot-note">Use the top toggle to switch conditions</div>
     <img
-      src="../assets/baseline-toggle.png"
+      src="assets/baseline-toggle.png"
       alt="Top toggle for switching between Baseline, Bar, Radar, and Co-design"
       class="onboarding-screenshot-img onboarding-toggle-screenshot"
     />
@@ -693,7 +693,7 @@ if (pageKey === 'baseline') {
     <div class="onboarding-screenshot-demo">
       <div class="onboarding-screenshot-note">Bottom-right visualisation button</div>
       <img
-        src="/assets/bar-expand-btn.png"
+        src="../assets/bar-expand-btn.png"
         alt="Bar chart expand button"
         class="onboarding-screenshot-img"
       />
