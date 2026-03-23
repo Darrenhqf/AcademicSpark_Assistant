@@ -651,7 +651,7 @@ window.submitRadarValues = async function submitRadarValues() {
     console.error(err);
   }
 };
-
+////////// Onborading panel ////////////////////////////
 function initOnboarding(pageKey) {
   const overlay = document.getElementById('onboardingOverlay');
   const step = document.getElementById('onboardingStep');
@@ -693,7 +693,7 @@ if (pageKey === 'baseline') {
     <div class="onboarding-screenshot-demo">
       <div class="onboarding-screenshot-note">Bottom-right visualisation button</div>
       <img
-        src="../assets/bar-expand-btn.png"
+        src="./assets/bar-expand-btn.png"
         alt="Bar chart expand button"
         class="onboarding-screenshot-img"
       />
