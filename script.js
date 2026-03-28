@@ -596,16 +596,6 @@ for (let ring = 1; ring <= 3; ring++) {
   `;
 }
 
-    const axisEnd = polarToCartesian(maxR + 2, centerAngle);
-    html += `
-      <line
-        x1="${cx}" y1="${cy}"
-        x2="${axisEnd.x.toFixed(2)}" y2="${axisEnd.y.toFixed(2)}"
-        stroke="rgba(189,196,198,0.45)"
-        stroke-width="1.2"
-      />
-    `;
-
     const labelPt = polarToCartesian(labelR, centerAngle);
     let anchor = 'middle';
     const cos = Math.cos(centerAngle);
