@@ -550,7 +550,7 @@ const labelR = maxR ;
 
   for (let ring = 1; ring <= 3; ring++) {
     const r = innerHole + ringStep * ring;
-    html += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(189,196,198,0.35)" stroke-width="1" stroke-dasharray="3 3"/>`;
+    html += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(7, 7, 7, 0.35)" stroke-width="1.2" stroke-dasharray="3 3"/>`;
   }
 
   html += `<circle cx="${cx}" cy="${cy}" r="${innerHole}" fill="rgba(245,248,250,0.95)" stroke="rgba(189,196,198,0.5)" stroke-width="1.5"/>`;
@@ -567,13 +567,15 @@ for (let ring = 1; ring <= level; ring++) {
   const fill = ring === 1 ? colors.Low : ring === 2 ? colors.Medium : colors.High;
 
   html += `
-    <path
-      d="${ringSectorPath(r0, r1, a0, a1)}"
-      fill="${fill}"
-      fill-opacity="0.82"
-      stroke="none"
-    />
-  `;
+  <path
+    d="${ringSectorPath(r0, r1, a0, a1)}"
+    fill="${fill}"
+    fill-opacity="0.82"
+    stroke="rgba(128, 123, 123, 0.78)"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+  />
+`;
 }
 
 for (let ring = 1; ring <= 3; ring++) {
